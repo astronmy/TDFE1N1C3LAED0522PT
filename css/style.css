@@ -1,81 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
 
 body{
-  font-family: 'Poppins', monospace; 
+  font-family: 'Montserrat', sans-serif;
 }
-
-h1{
-  font-weight: 400;
+a {
+  color: white;
+  text-decoration: none;
 }
-
-/*
-  background-repeat
-  - repeat    (valor defecto)
-  - no-repeat (solo una vez)
-  - repeat-x  (imprime eje x)
-  - repeat-y  (imprime eje y) 
-
-  background-position: 
-  (x , y)
-  top, left, right, bottom
-
-  background-size:
-  - auto    (por defecto)
-  - cover   ()
-  - contain (ajusta la imagen dentro del elemento para que se vea completa. por mas de que no ocupe toda el area disponible)
-*/
-.contenedor{
-    background-color: salmon;
-    background-image: url('../img/sun.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-}
-
-
-.contenedor-dos{
-  background-color: salmon;
-  background-image: url('../img/bg.jpg');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: cover;
-}
-
-.imagen-fija {
-  background-attachment: fixed;
-}
-
-
-.contenedor-tres{
-  background-color: salmon;
-  background-image: 
-  url('../img/sun.png'), 
-  url('../img/sun.png'), 
-  url('../img/bg.jpg');
-  background-repeat: 
-  repeat-y,
-  repeat-x,
-  no-repeat;
-  background-size: 
-  auto,
-  auto,
-  cover;
-
-  
-}
-.contenedor-cuatro{
-  /*
-    -shortHand
-    background: 
-    -----------------------------
-    background-color 
-    background-image 
-    background-repeat 
-    background-position
-  */
-  background: salmon url('../img/sun.png') repeat-x center;
-}
-
-footer {
+.cabecera-uno{
+  background-color: #E6E6E6;
   text-align: center;
+}
+.cabecera-dos{
+  background-color: #E6E6E6;
+  background-image: url("../img/logo_batman.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  /* spoiler */
+  height: 200px;
+}
+.titulo{
+  background-color: #C4C4C4;
+  color: #005677;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.titulo-seccion{
+  background-color: #C4C4C4;
+  color: #005677;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+li span{
+  font-weight: 700;
+}
+.lista-limpia{
+  list-style-type: none;
+}
+.pie{
+  color: white;
+  background-color: #005677;
+  font-weight: bold;
+  text-align: center;
+  /* spoiler */
+  line-height: 50px;
+  height: 50px;
 }
