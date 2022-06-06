@@ -1,52 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  /*
+    box-sizing => content-box
+    ------------------------------------------
+    width + padding + border = el ancho total
+    height + padding + border = al alto total  
+    */
+    box-sizing: border-box;
+}
 
-@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
 
-body{
-  font-family: 'Montserrat', sans-serif;
+.contenedor {
+  background-color: lightcoral;
+  width: 500px;
 }
-a {
+
+.box {
+  background-color: crimson;
   color: white;
-  text-decoration: none;
-}
-.cabecera-uno{
-  background-color: #E6E6E6;
-  text-align: center;
-}
-.cabecera-dos{
-  background-color: #E6E6E6;
-  background-image: url("../img/logo_batman.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  /* spoiler */
-  height: 200px;
-}
-.titulo{
-  background-color: #C4C4C4;
-  color: #005677;
-  letter-spacing: 10px;
-  text-align: center;
-  text-transform: uppercase;
-}
-.titulo-seccion{
-  background-color: #C4C4C4;
-  color: #005677;
-  letter-spacing: 7px;
-  text-transform: uppercase;
-}
-li span{
-  font-weight: 700;
-}
-.lista-limpia{
-  list-style-type: none;
-}
-.pie{
-  color: white;
-  background-color: #005677;
+  display: inline-block;
   font-weight: bold;
+  /* 
+  Ancho 
+  width: - recibe valores en pixeles (absolutos)
+  - porcentaje (es en relacion al padre)
+  
+  Altura
+  height:
+  - recibe valores en pixeles (absolutos)
+  - porcentaje (es en relacion al padre)  
+  */
+  height: 100px;
   text-align: center;
-  /* spoiler */
-  line-height: 50px;
-  height: 50px;
+  width: 100px;
+
+  /*  margin: para distanciarme de los elementos 
+  que me rodean 
+    
+  20px hacia todos los lados
+  -----------------------------
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  20px hacia todos lados con solo margin
+  ----------------------------------
+  Si defino un solo valor para margin. Este 
+  valor aplicara a todos lados
+  margin: 20px
+
+  20px horizontal y 10px vertical
+  -----------------------------------
+  Si defino 2 valores el primer valor
+  aplica arriba y abajo (top, bottom) y el 
+  2 valor aplica derecha e izquierda
+  (left , right)
+  
+  margin: 10px 20px;
+*/
+  /*
+  3 valores
+    1- valor es top
+    2- valor es horizontal (left , right)
+    3- valor es bottom
+    
+    margin: 10px 20px 5px;
+
+    4 valores es en el sentido de las agujas
+    del reloj
+    - top
+    - right
+    - bottom
+    - left
+  */
+  margin: 1px;
+  padding: 10px;
+  /*
+    border: el tamaño (pixeles) el tipo (estilo) color
+    - dotted (punteado)
+    - solid  (linea continua)
+    - double ( doble linea)
+    - dashed (linea cortada) 
+
+  */
+  border: 1px white double;
+
+}
+
+span {
+  display: block;
+}
+
+.box-dos {
+  background-color: crimson;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  width: 300px;
+  height: 300px;
+}
+.contenedor-dos{
+  background-color: yellow;
+  padding-top: 20px;
+  /* position: relative; */
+}
+
+.avatar {
+  position: absolute;
+  display: block;
+  width: 80px;
+  /*
+    top, left, botom , right
+  */
+  top: 0px;
+  left: 50px;
 }
