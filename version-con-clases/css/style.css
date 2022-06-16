@@ -44,12 +44,12 @@ body {
 
 .card-container{
   margin: 40px auto;
-  width: 100%;
-/*   display: flex;
-  flex-direction: row;
+  width: 1200px;
+  display: flex;
+  /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; */
+  gap: 10px; 
 }
 
 .card{
@@ -60,7 +60,7 @@ body {
   display: inline-block;
   height: 540px;
   margin: 12px;
-  width: 300px;
+  width: 20%;
 }
 
 .card__header{
@@ -108,4 +108,25 @@ body {
   width: 140px;
 }
 
+/* @media screen and (max-width: 740px) {
+  .card-container{
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card{
+    width: 400px;
+    height: 600px;
+  }
+  .card__background{
+    object-fit: cover;
+    width: 400px;
+  }
+  .card__avatar{
+    left: 35%;
+  }
+} */
 
