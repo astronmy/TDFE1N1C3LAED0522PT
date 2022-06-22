@@ -5,77 +5,88 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Super Heroes</title>
+  <title>Formulario</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <div>
-      <span>Descuentos 20%</span>
-    </div>
-    <h1>Heroes</h1>
-  </header>
-  <main>
-    <section>
-      <article>
-        <figure>
-          <img src="images/baticueva.png" alt="baticueva">
-          <img src="images/corazon.png" class="corazon" alt="icono corazon">
-        </figure>
-        <div>
-          <img src="images/batman.png" alt="avatar batman">
-          <h2>BATMAN</h2>
-          <p> Bruce Wayne es el único personaje que se identifica como Batman y aparece en Batman, Detective Comics,
-            Batman y Robin, y Batman: The Dark Knight. Dick Grayson vuelve al manto de Nightwing</p>
-          <a href="#">Ver más</a>
-        </div>
-      </article>
+  <div class="container">
+    <!-- 
+          action: El destino donde la viajara la info
+          method: Define la forma en que se va a enviar 
+          esa informacion
+            GET  => Todos los datos del formulario viajan en la URL 
+            POST => Los datos viajan en el cuerpo de la peticion
 
-      <article>
-        <figure>
-          <img src="images/bgharley.png" alt="bgharley">
-          <img src="images/corazon.png" class="corazon" alt="icono corazon">
-        </figure>
-        <div>
-          <img src="images/harley.png" alt="avatar harley">
-          <h2>BATMAN</h2>
-          <p> Bruce Wayne es el único personaje que se identifica como Batman y aparece en Batman, Detective Comics,
-            Batman y Robin, y Batman: The Dark Knight. Dick Grayson vuelve al manto de Nightwing</p>
-          <a href="#">Ver más</a>
-        </div>
-      </article>
+        Cuando lo envia 
+        [destino]?[nombre_input]=[valor]&[nombre_input]=[valor]
+      -->
+    <form action="destino.html" method="GET" autocomplete="off">
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="campo1">Nombre Completo</label>
+        <input type="text" id="campo1" name="nombre_completo" maxlength="25" minlength="3" required
+          placeholder="Ingresa un nombre">
 
-      <article>
-        <figure>
-          <img src="images/baticueva.png" alt="baticueva">
-          <img src="images/corazon.png" class="corazon" alt="icono corazon">
-        </figure>
-        <div>
-          <img src="images/batman.png" alt="avatar batman">
-          <h2>BATMAN</h2>
-          <p> Bruce Wayne es el único personaje que se identifica como Batman y aparece en Batman, Detective Comics,
-            Batman y Robin, y Batman: The Dark Knight. Dick Grayson vuelve al manto de Nightwing</p>
-          <a href="#">Ver más</a>
-        </div>
-      </article>
+        <label for="campo2">Documento</label>
+        <input type="number" id="campo2" name="documento" required>
 
-      
-      <article>
-        <figure>
-          <img src="images/bgharley.png" alt="bgharley">
-          <img src="images/corazon.png" class="corazon" alt="icono corazon">
-        </figure>
-        <div>
-          <img src="images/harley.png" alt="avatar harley">
-          <h2>BATMAN</h2>
-          <p> Bruce Wayne es el único personaje que se identifica como Batman y aparece en Batman, Detective Comics,
-            Batman y Robin, y Batman: The Dark Knight. Dick Grayson vuelve al manto de Nightwing</p>
-          <a href="#">Ver más</a>
-        </div>
-      </article>
-    </section>
-  </main>
+        <label for="campo3">Email</label>
+        <input type="email" id="campo3" name="correo" required>
+
+        <label for="campo4">Clave</label>
+        <input type="password" id="campo4" name="clave" required>
+
+        <!-- YYYY-mm-dd -->
+        <label for="campo5">Fecha de Nacimiento</label>
+        <input type="date" id="campo5" name="nacimiento" max="2022-06-30" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Otros Personales</legend>
+        <label for="campo6">Hora</label>
+        <input type="time" id="campo6" name="hora" required>
+
+        <label for="campo7">Archivo</label>
+        <input type="file" id="campo7" name="file" accept=".png, .csv, .xls, .xlsx" multiple>
+
+        <label for="campo8">Nacionalidad</label>
+        <select name="nacionalidad" id="campo8">
+          <optgroup label="America del Sur">
+            <option value="ARG">Argentina</option>
+            <option value="CL" selected>Chile</option>
+            <option value="COL">Colombia</option>
+          </optgroup>
+          <optgroup label="America del Norte">
+            <option value="US">Estados Unidos</option>
+          </optgroup>
+        </select>
+
+        <input id="check" type="checkbox" name="tyc" checked>
+        <label for="check">Acepta los Términos y Condiciones</label>
+
+      </fieldset>
+
+      <!-- puedo utilizar el boton de un form de dos formas 
+              <button>
+                    - submit
+                    - button
+                    - reset
+              <input>
+                
+              -->
+      <!-- 
+                <input type="submit" value="Enviar Datos"> -->
+      <button type="submit">
+        Enviar Datos
+      </button>
+
+      <button type="reset">
+        Limpiar Form
+      </button>
+    </form>
+    </form>
+  </div>
 </body>
 
 </html>
