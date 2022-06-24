@@ -1,92 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario</title>
+  <title>Pseudoclases</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div class="container">
-    <!-- 
-          action: El destino donde la viajara la info
-          method: Define la forma en que se va a enviar 
-          esa informacion
-            GET  => Todos los datos del formulario viajan en la URL 
-            POST => Los datos viajan en el cuerpo de la peticion
+    <div class="container">
+      <div class="box"></div>
+    </div>
 
-        Cuando lo envia 
-        [destino]?[nombre_input]=[valor]&[nombre_input]=[valor]
-      -->
-    <form action="destino.html" method="GET" autocomplete="off">
-      <fieldset>
-        <legend>Datos Personales</legend>
-        <label for="campo1">Nombre Completo</label>
-        <input type="text" id="campo1" name="nombre_completo" maxlength="25" minlength="3" required
-          placeholder="Ingresa un nombre">
-
-        <label for="campo2">Documento</label>
-        <input type="number" id="campo2" name="documento" required>
-
-        <label for="campo3">Email</label>
-        <input type="email" id="campo3" name="correo" required>
-
-        <label for="campo4">Clave</label>
-        <input type="password" id="campo4" name="clave" required>
-
-        <!-- YYYY-mm-dd -->
-        <label for="campo5">Fecha de Nacimiento</label>
-        <input type="date" id="campo5" name="nacimiento" max="2022-06-30" required>
-      </fieldset>
-
-      <fieldset>
-        <legend>Otros Personales</legend>
-        <label for="campo6">Hora</label>
-        <input type="time" id="campo6" name="hora" required>
-
-        <label for="campo7">Archivo</label>
-        <input type="file" id="campo7" name="file" accept=".png, .csv, .xls, .xlsx" multiple>
-
-        <label for="campo8">Nacionalidad</label>
-        <select name="nacionalidad" id="campo8">
-          <optgroup label="America del Sur">
-            <option value="ARG">Argentina</option>
-            <option value="CL" selected>Chile</option>
-            <option value="COL">Colombia</option>
-          </optgroup>
-          <optgroup label="America del Norte">
-            <option value="US">Estados Unidos</option>
-          </optgroup>
-        </select>
-
-        <input id="check" type="checkbox" name="tyc" checked>
-        <label for="check">Acepta los Términos y Condiciones</label>
-
-      </fieldset>
-
-      <!-- puedo utilizar el boton de un form de dos formas 
-              <button>
-                    - submit
-                    - button
-                    - reset
-              <input>
-                
-              -->
-      <!-- 
-                <input type="submit" value="Enviar Datos"> -->
-      <button type="submit">
-        Enviar Datos
-      </button>
-
-      <button type="reset">
-        Limpiar Form
-      </button>
+    <form action="">
+        <input type="text" name="name" 
+        placeholder="Ingrese su nombre"
+        id="nombre">
+        <input type="checkbox" name="tyc" 
+        id="tyc">
+        <label for="tyc">Acepte los TYC</label>
     </form>
-    </form>
-  </div>
 </body>
-
 </html>
