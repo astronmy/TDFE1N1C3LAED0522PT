@@ -27,7 +27,7 @@ header {
   height: 80px;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 header>h1 {
@@ -48,6 +48,15 @@ section {
   filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.16));
   margin: 20px 20px;
   max-width: 300px;
+  transition: all 0.3s ease-in;
+  opacity: 0.5;
+}
+
+.card:hover{
+  outline: 2px solid blue;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  /* transform: scale(1.2); */
+  opacity: 1;
 }
 
 /* ESTILOS CARD BACKGROUND HEADER */
@@ -110,6 +119,7 @@ section {
   position: absolute;
   top: -65px;
   width: 120px;
+  opacity: 1;
 }
 
 /* ESTILOS CARD BTN */
@@ -151,4 +161,44 @@ footer>p {
   position: fixed;
   right: 20px;
   top: 50%;
+ 
+}
+
+.add:hover{
+  animation: rotate .6s ease-in-out;
+  animation-fill-mode: forwards;
+  cursor:crosshair;
+  
+}
+
+.card .card-heart:active{
+  /* Asignando al hover la animacion del corazon que esta declarada al final*/
+  animation-name: heart;
+  animation-duration: 5s;
+  animation-timing-function: steps(29);
+  animation-direction: alternate-reverse;
+  cursor: pointer;
+}
+
+
+@keyframes heart {
+  /* Me estoy desplazando en esa imagen del corazon de izquierda hacia derecha*/
+  to{
+    background-position:0px;
+  }
+  from{
+    background-position: 2900px;
+  }
+  
+}
+
+@keyframes rotate {
+    0%{
+      transform: rotate(0);
+      background-color: #00669f;
+    }
+    100%{
+      transform: rotate(360deg);
+      background-color: #1cd1b0;
+    }
 }
