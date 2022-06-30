@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
+
+
+:root {
+  --primary-dark: #BA4270;
+  --primary-light: #E1E1E1;
+  --secondary-sanjuan: #36536B;
+  --secondary-mirage: #1B262F;
+  --secondary-pink: #DA6D97;
+  --secondary-light: #6C8294;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+  text-decoration: none;
+}
+
+/* General styles*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #F2F2F2;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+  color: var(--secondary-sanjuan);
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+input::placeholder{
+  font-weight: 700;
+  color: var(--secondary-sanjuan);
+}
+
+
+/* header styles*/
+header {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1110px;
+  margin: 4rem auto;
+  width: 100%;
+}
+
+.header__menu {
+  align-items: center;
+  display: flex;
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
+.header__logo {
+  width: 138px;
+  height: 38px;
+}
+
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.menu__item a {
+  color: var(--secondary-sanjuan);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.763;
+}
+
+.header__button {
+  background-color: var(--primary-dark);
+  border-radius: 2.4rem;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  /* TODO: revisar posteriormente implementacion*/
+  color: #FBFCFE;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+  height: 4.8rem;
+  letter-spacing: -0.115385px;
+  text-align: center;
+  transition: background-color 500ms;
+  width: 173px;
+}
+
+/* Banner Styles*/
+
+.container {
+  max-width: 1110px;
+  margin: 2rem auto;
+}
+
+.banner {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.banner__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+  max-height: 500px;
+}
+
+.banner__img {
+  /* background-image: url("../images/mobile.png");
+  background-repeat: no-repeat; */
+  width: 50%;
+}
+
+.banner__img img {
+  display: block;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+
+/* events */
+.header__button:hover{
+  background-color: var(--secondary-pink);
+
+}
+
+/*
+font-family: 'DM Serif Display', serif;
+
+*/
+@media screen and (max-width: 1100px) {}
+
+@media screen and (max-width: 600px) {}
+
+
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
+  .header__menu,
+  .header__button {
+    display: none;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner__info,
+  .banner__img {
+    align-self: center;
+    width: 80%;
+  }
+
+  .banner__info {
+    order: 1;
+  }
+
+}
+
+/* @media screen and (min-width: 400px) {
+  
+}
+
+@media screen and (min-width: 768px) {
+  
+}
+
+@media screen and (min-width: 1200px) {
+  
+} */
