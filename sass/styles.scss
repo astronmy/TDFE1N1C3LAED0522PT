@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'general';
+@import 'header';
+
+@mixin crearBoton($bgColor, $txtColor, $ancho: 200px, $alto: 80px) {
+  background-color: $bgColor;
+  border: none;
+  color: $txtColor;
+  display: block;
+  height: $alto;
+  margin: 1rem auto;
+  text-align: center;
+  width: $ancho;
+}
+
+.btn-alert{
+  @include crearBoton(crimson,white, 100px, 50px);
+}
+.btn-warning{
+  @include crearBoton(yellow,black, 120px, 40px);
+}
+.btn-success{
+  @include crearBoton(green,white, 200px, 80px);
+}
