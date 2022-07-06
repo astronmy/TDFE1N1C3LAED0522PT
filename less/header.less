@@ -1,11 +1,7 @@
-@use 'variables' as v;
+@import 'variables';
 
 header {
   margin-bottom: 2rem;
-
-  @media screen and (max-width: 480px) {
-    margin-bottom: 1rem;
-  }
 
   nav {
     padding-top: 1rem;
@@ -16,7 +12,7 @@ header {
       list-style: none;
 
       a {
-        background-color: v.$primaryColor;
+        background-color: @primaryColor;
         border-radius: 5%;
         color: white;
         padding: 1.5rem;
@@ -24,7 +20,7 @@ header {
         transition: all 0.5s;
 
         &:hover {
-          background-color: v.$secondaryColor;
+          background-color: @secondaryColor;
         }
       }
     }

@@ -1,24 +1,57 @@
-@import 'variables';
+
 @import 'general';
 @import 'header';
+@import 'mixins';
 
-@mixin crearBoton($bgColor, $txtColor, $ancho: 200px, $alto: 80px) {
-  background-color: $bgColor;
-  border: none;
-  color: $txtColor;
+%btn_padre{
+  border-radius: 5%;
   display: block;
-  height: $alto;
+  height: 50px;
+  outline: 1px solid black;
   margin: 1rem auto;
   text-align: center;
-  width: $ancho;
+  width: 100px;
 }
 
 .btn-alert{
-  @include crearBoton(crimson,white, 100px, 50px);
+  @extend %btn_padre;
+  @include btnColor(crimson);
 }
 .btn-warning{
-  @include crearBoton(yellow,black, 120px, 40px);
+  @extend %btn_padre;
+  background-color: yellow;
+  /* @include crearBoton(yellow,black, 120px, 40px); */
 }
 .btn-success{
-  @include crearBoton(green,white, 200px, 80px);
+  @extend %btn_padre;
+  background-color: green;
+  /* @include crearBoton(green,white, 200px, 80px); */
 }
+
+$entorno: preproduccion;
+p{
+  @if $entorno == desarrollo{
+    font-size: 4rem;
+    color: blue;
+  }@else if $entorno == produccion{
+    font-size: 1rem;
+    color: black;
+  }@else{
+    font-size: 2rem;
+    color: green;
+  }
+}
+
+$listaImagenes: escudo, lanza, casco, casa, avion, moto;
+
+@each $imagen in $listaImagenes{
+    .icono-#{$imagen}{
+        background-image: url('images/iconos/#{$imagen}.png');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+
+

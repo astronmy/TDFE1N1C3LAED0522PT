@@ -1,0 +1,15 @@
+@mixin crearBoton($bgColor, $txtColor, $ancho: 200px, $alto: 80px) {
+  background-color: $bgColor;
+  border: none;
+  color: $txtColor;
+  display: block;
+  height: $alto;
+  margin: 1rem auto;
+  text-align: center;
+  width: $ancho;
+}
+
+@mixin btnColor($bgColor, $txtColor: white) {
+  background-color: $bgColor;
+  color: $txtColor;
+}

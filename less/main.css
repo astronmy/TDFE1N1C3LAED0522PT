@@ -3,14 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 header {
   margin-bottom: 2rem;
-}
-@media screen and (max-width: 480px) {
-  header {
-    margin-bottom: 1rem;
-  }
 }
 header nav {
   padding-top: 1rem;
@@ -32,38 +26,20 @@ header nav ul a {
 header nav ul a:hover {
   background-color: tomato;
 }
-
+.btn_padre,
 .btn-alert {
-  background-color: crimson;
-  border: none;
-  color: white;
   display: block;
   height: 50px;
   margin: 1rem auto;
   text-align: center;
   width: 100px;
 }
-
-.btn-warning {
-  background-color: yellow;
-  border: none;
-  color: black;
-  display: block;
-  height: 40px;
-  margin: 1rem auto;
-  text-align: center;
-  width: 120px;
+.border,
+.btn-alert {
+  border-radius: 5%;
+  outline: 1px solid black;
 }
-
-.btn-success {
-  background-color: green;
-  border: none;
+.btn-alert {
+  background-color: crimson;
   color: white;
-  display: block;
-  height: 80px;
-  margin: 1rem auto;
-  text-align: center;
-  width: 200px;
 }
-
-/*# sourceMappingURL=style.css.map */

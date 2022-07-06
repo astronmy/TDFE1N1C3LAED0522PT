@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 480px) {
+  header {
+    margin-bottom: 1rem;
+  }
+}
+header nav {
+  padding-top: 1rem;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+}
+header nav ul a {
+  background-color: crimson;
+  border-radius: 5%;
+  color: white;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+header nav ul a:hover {
+  background-color: tomato;
+}
+
+.btn-success, .btn-warning, .btn-alert {
+  border-radius: 5%;
+  display: block;
+  height: 50px;
+  outline: 1px solid black;
+  margin: 1rem auto;
+  text-align: center;
+  width: 100px;
+}
+
+.btn-alert {
+  background-color: crimson;
+  color: white;
+}
+
+.btn-warning {
+  background-color: yellow;
+  /* @include crearBoton(yellow,black, 120px, 40px); */
+}
+
+.btn-success {
+  background-color: green;
+  /* @include crearBoton(green,white, 200px, 80px); */
+}
+
+p {
+  font-size: 2rem;
+  color: green;
+}
+
+.icono-escudo {
+  background-image: url("images/iconos/escudo.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.icono-lanza {
+  background-image: url("images/iconos/lanza.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.icono-casco {
+  background-image: url("images/iconos/casco.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.icono-casa {
+  background-image: url("images/iconos/casa.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.icono-avion {
+  background-image: url("images/iconos/avion.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.icono-moto {
+  background-image: url("images/iconos/moto.png");
+  background-position: center;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */
