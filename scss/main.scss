@@ -1,0 +1,15 @@
+$primary: crimson;
+$light: grey;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 800px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$spacer: 0.3rem;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
